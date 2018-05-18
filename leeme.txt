@@ -1,0 +1,26 @@
+#Versiones
+    Python 3.6.3
+    psycopg2-2.7.4
+    Django-2.0.5
+    virtualenv-15.2.0
+    pip3
+    psql (PostgreSQL) 9.6.8
+
+#Trabajar con Entorno Virtual
+    virtualenv ~/.virtualenvs/biblio_app --python=python3
+    source ~/.virtualenvs/biblio_app/bin/activate
+
+#Crear en Postgre Base de datos (Modificar usuario en settings.py)
+    CREATE DATABASE biaci_go
+
+#Migrar cambios a Postgre
+    python manage.py migrate
+
+#Correr Servidor Django
+    python manage.py runserver
+
+#Migrar modelos de app
+    python manage.py makemigrations biaci_go
+
+#Crear Superusuario para Admin
+    python manage.py createsuperuser
